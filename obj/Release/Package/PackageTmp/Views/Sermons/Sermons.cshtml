@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "Sermons";
+}
+<!-- Start Nav Backed Header -->
+<div class="nav-backed-header parallax" style="background-image:url(http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Sermons</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Nav Backed Header -->
+<!-- Start Page Header -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Sermons</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+<!-- Start Content -->
+<div class="main" role="main">
+    <div id="content" class="content full">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-lg-8 col-sm-12">
+                    <div class="listing post-listing" id="watchVideo">
+                        <header class="listing-header">
+                            <h3>Watch Sermon</h3>
+                        </header>
+                        <section class="listing-cont">
+                            <div class="plyr__video-wrapper plyr__video-embed" style="aspect-ratio: 16 / 9;">
+                        <iframe id="youtube-8972" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="" width="640" height="360" src="https://www.youtube.com/embed/8sHnWMQeu2k?autoplay=0&amp;controls=0&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fnative-church.imithemes.com%2Fparish%2Fimi_sermon%2Fduis-pellentesque-purus-ac-nulla-3%2F&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;customControls=true&amp;noCookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fnative-church.imithemes.com&amp;widgetid=1"></iframe>
+                    </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="listing post-listing">
+                        <header class="listing-header">
+                            <h3>Sunday Sermons</h3>
+                        </header>
+                        <section class="listing-cont">
+                            <ul>
+                                @foreach (var sermon in Model)
+                                {
+                                <li class="item post">
+                                    <div class="row">
+                                        <div class="col-md-4"> <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo"  class="media-box"> <img src="~/Images/YT-thumbnails/12.11.23_Wed.jpg"  srcset="" alt="" class="img-thumbnail"> </a></div>
+                                        <div class="col-md-8">
+                                            <div class="">
+                                                <p>@sermon.Title</p>
+                                                <span class=""><i class="fa fa-calendar"></i> on @sermon.PostedOn &nbsp; <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo" class="btn btn-primary">Watch<i class="fa fa-long-arrow-right"></i></a></span> 
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                                }
+                              
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                    <!--<div class="col-md-4 sermon-archive" style="height:750px;overflow:auto;">
+            <div class="spacer-20">
+
+            </div>
+            <!-- Sermons Listing -->
+                    <!--<article class="post sermon">
+            <header class="post-title">
+                <div class="row">
+                    <div class="col-md-9 col-sm-9">
+                        <h3><a href="https://www.youtube.com/watch?v=a-WFtXAwjsg&t=1826s" target="_blank">Sunday Meeting, CCFC Kavundampalayam</a></h3>
+                        <span class="meta-data"><i class="fa fa-calendar"></i> Posted on 19th Nov, 2023 | Bro: <a href="#">Samuel</a></span>
+                    </div>
+                </div>
+            </header>
+            <div class="post-content">
+                <div class="row">
+                    <div class="col-md-9 col-sm-9"> <a href="" class="media-box"><img src="~/Images/YT-thumbnails/19.11.23_Sunday.jpg" alt="" class="img-thumbnail"></a></div>
+                    <div class="col-md-8">
+                        <p>கீழ்ப்படிதலினாலே பூரணத்தை நோக்கி கடந்து போவோமாக</p>
+                        <p>Press on to perfection in obedience</p>
+                        <p><a href="#watchVideo" target=""  onclick="playYTVideo('a-WFtXAwjsg')" class="btn btn-primary">WATCH<i class="fa fa-long-arrow-right"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </article>-->
+                    @*<article class="post sermon">
+                <header class="post-title">
+                    <div class="row">
+                        <div class="col-md-9 col-sm-9">
+                            <h3><a href="https://www.youtube.com/watch?v=sW7KoB4cIUs&t=454s" target="_blank">Wednesday Meeting, CCFC Kavundampalayam</a></h3>
+                            <span class="meta-data"><i class="fa fa-calendar"></i> Posted on 15th Nov, 2023 | Bro: <a href="#">Samuel</a></span>
+                        </div>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <div class="row">
+                        <div class="col-md-4"> <a href="" class="media-box"> <img src="~/Images/YT-thumbnails/15.11.23_Wed.jpg" alt="" class="img-thumbnail"> </a> </div>
+                        <div class="col-md-8">
+                            <p>இயேசு தம்முடைய தாழ்மையினாலே சாத்தானை ஜெயித்தார், தமது கீழ்ப்படிதலினாலே அவர் தேவனை பிரியப்படுத்தினார்</p>
+                            <p>By humility Jesus overcame Satan and by His obedience He pleased God</p>
+                            <p><a href="https://www.youtube.com/watch?v=sW7KoB4cIUs&t=454s" target="_blank" class="btn btn-primary">WATCH<i class="fa fa-long-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="post sermon">
+                <header class="post-title">
+                    <div class="row">
+                        <div class="col-md-9 col-sm-9">
+                            <h3><a href="">Sunday Meeting, CCFC Kavundampalayam</a></h3>
+                            <span class="meta-data"><i class="fa fa-calendar"></i> Posted on 17th Dec, 2013 | Pastor: <a href="#">Admin</a></span>
+                        </div>
+                        <div class="col-md-3 col-sm-3 sermon-actions"> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Video"><i class="fa fa-video-camera"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Audio"><i class="fa fa-headphones"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Read online"><i class="fa fa-file-text-o"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Download PDF"><i class="fa fa-book"></i></a> </div>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <div class="row">
+                        <div class="col-md-4"> <a href="single-sermon.html" class="media-box"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a> </div>
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                            <p><a href="single-sermon.html" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="post sermon">
+                <header class="post-title">
+                    <div class="row">
+                        <div class="col-md-9 col-sm-9">
+                            <h3><a href="single-sermon.html">Voluptatum deleniti atque corrupti</a></h3>
+                            <span class="meta-data"><i class="fa fa-calendar"></i> Posted on 17th Dec, 2013 | Pastor: <a href="#">Admin</a></span>
+                        </div>
+                        <div class="col-md-3 col-sm-3 sermon-actions"> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Video"><i class="fa fa-video-camera"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Audio"><i class="fa fa-headphones"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Read online"><i class="fa fa-file-text-o"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Download PDF"><i class="fa fa-book"></i></a> </div>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <div class="row">
+                        <div class="col-md-4"> <a href="single-sermon.html" class="media-box"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a> </div>
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                            <p><a href="single-sermon.html" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </article>*@
+
+
+                    <ul class="pagination">
+                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>-->
+                <!-- Start Sidebar -->
+
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    function playYTVideo(videoId) {
+
+        $("#youtube-8972").attr('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&origin=http://example.com');
+        //$("#EventHeaderTam").text('ஞாயிறு கூடுகை - Bro. Samuel');
+        //$("#EventHeaderEng").text('Sunday Meeting - Bro. Samuel');
+        //$('#EventHeaderTime').text('Coimbatore CFC 19.11.2023 | Sunday Meeting');
+    }
+</script>

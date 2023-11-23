@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js">
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CFC- Coimbatore</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+      ================================================== -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <!-- CSS
+      ================================================== -->
+    <link href="/Content/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/Content/plugins/mediaelement/mediaelementplayer.css" rel="stylesheet" type="text/css">
+    <link href="/Content/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/Content/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="~/Images/CFC_Logo.png">
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
+    <!-- Color Style -->
+    <link href="/Content/colors/color1.css" rel="stylesheet" type="text/css">
+    <link href="/Content/css/custom.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- SCRIPTS
+      ================================================== -->
+    <script src="/Content/js/modernizr.js"></script><!-- Modernizr -->
+
+    <style type="text/css">
+        .cfc-text {
+            font-family: Roboto Condensed !important;
+            font-size: 200%;
+            font-weight: 700;
+            margin-top: 20px;
+            color: #913838;
+        }
+
+        figure {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 40px;
+            margin-inline-end: 40px;
+        }
+
+        .polaroid {
+            width: 80%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .pull-left {
+            float: left !important;
+        }
+
+        figure.inner-image:after {
+            z-index: -1;
+            -webkit-transform: rotate(3deg);
+            -moz-transform: rotate(3deg);
+            -o-transform: rotate(3deg);
+            -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
+            right: 10px;
+            left: auto;
+        }
+
+        figure.inner-image {
+            position: relative;
+            border: 1px solid #d5d5d5;
+            background: #fff;
+            padding: 5px;
+            display: inline-block;
+            margin: 10px !important;
+        }
+
+            figure.inner-image:before, figure.inner-image:after {
+                z-index: -1;
+                position: absolute;
+                content: "";
+                bottom: 15px;
+                left: 10px;
+                width: 50%;
+                top: 80%;
+                max-width: 300px;
+                background: #777;
+                -webkit-box-shadow: 0 15px 10px #777;
+                -moz-box-shadow: 0 15px 10px #777;
+                box-shadow: 0 15px 10px #777;
+                -webkit-transform: rotate(-3deg);
+                -moz-transform: rotate(-3deg);
+                -o-transform: rotate(-3deg);
+                -ms-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+            }
+
+        .inner-image {
+            position: relative;
+            border: 1px solid #d5d5d5;
+            background: #fff;
+            padding: 5px;
+            display: inline-block;
+            margin: 10px !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="body">
+
+        @if (ViewBag.Template != 0)
+        {
+            <!-- Start Site Header -->
+            <header class="site-header">
+                <div class="topbar" style="background-color: rgba(255,255,255,.6) ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-6 col-xs-8">
+                                <h1 class="logo"> <a href="../home/index"><img src="~/Images/Coimbatore-Name-Logo.png" alt="Logo"></a> </h1>
+                            </div>
+                            <div class="col-md-8 col-sm-6 col-xs-4">                              
+                                <a href="#" class="visible-sm visible-xs menu-toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-menu-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <nav class="navigation">
+                                    <ul class="sf-menu" style="background: #F2CA65; ">
+                                        <li>
+                                            @Html.ActionLink("Home", "Index", "Home")
+
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("About Us", "About", "Home")
+                                            <ul class="dropdown">
+                                                <li>@Html.ActionLink("Short Hsitory", "ShortHsitory", "AboutUs")</li>
+                                                <li>@Html.ActionLink("What we Believe", "WhatWeBelieve", "AboutUs")</li>
+                                                <li>@Html.ActionLink("Leadership", "Leadership", "AboutUs")</li>
+                                                <li>@Html.ActionLink("Affliation And Purpose", "OurPurposeandAffliation", "AboutUs")</li>
+                                                <li>@Html.ActionLink("Our Meetings", "OurMeetings", "AboutUs")</li>
+                                                <li>@Html.ActionLink("Our Financial Policy", "OurFinancialPolicy", "AboutUs")</li>
+                                            </ul>
+                                        </li>
+                                        <li>@Html.ActionLink("About Zac Poonen", "AboutZacPoonen", "Home")</li>
+                                        <li>
+                                            @Html.ActionLink("Short Hsitory", "ShortHsitory", "AboutUs")
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Sermons", "Index", "Home")
+                                            <ul class="dropdown">
+                                                <li>@Html.ActionLink("Sunday Sermon", "SunSermons", "Sermons")</li>
+                                                <li>@Html.ActionLink("Wednesday Sermon", "WedSermons", "Sermons")</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Contact Us", "Contact", "Home")
+                                        </li>
+                                        
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        }
+        <!-- End Site Header -->
+
+
+        @RenderBody()
+
+
+        <!-- Start Footer -->
+        @if (ViewBag.Template != 0)
+        {
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start Footer Widgets -->
+                        <div class="col-md-4 col-sm-4 widget footer-widget">
+                            <h4 class="footer-widget-title">About our Church</h4>
+                            <img src="~/Images/CFC_Coimbatore.png" width="70" height="70" alt="Logo">
+                            <div class="spacer-20"></div>
+                            <p>The Christian Fellowship Church in Coimbatore is affiliated with the Christian Fellowship Center in Bangalore and holds its gatherings in Krishna Complex, Kavundampalayam, Coimbatore...</p>
+                            @Html.ActionLink("Read More >>", "ShortHsitory", "AboutUs")
+                        </div>
+                        <div class="col-md-4 col-sm-4 widget footer-widget">
+                            <h4 class="footer-widget-title">Blogroll</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">About Zac Poonen</a></li>
+                                <li><a href="#">Short History</a></li>
+                                <li><a href="#">Sermons</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4 widget footer-widget">
+                            <h4 class="footer-widget-title">Our Church on Youtube</h4>
+                            <ul class="twitter-widget" data-slide-to="1">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        }
+        <footer class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="copyrights-col-left col-md-6 col-sm-6">
+                        <p>&copy; @DateTime.Now.Year - Christian Fellowship Church - Coimbatore, Tamilnadu, India. All Rights Reserved.</p>
+                    </div>
+                    <div class="copyrights-col-right col-md-6 col-sm-6">
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.youtube.com/CFCCoimbatore" target="_blank"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    </div>
+    <script src="~/Content/js/jquery-2.0.0.min.js"></script>
+    <!-- Jquery Library Call -->
+    <script src="~/Content/plugins/prettyphoto/js/prettyphoto.js"></script>
+    <!-- PrettyPhoto Plugin -->
+    <script src="~/Content/js/helper-plugins.js"></script>
+    <!-- Plugins -->
+    <script src="~/Content/js/bootstrap.js"></script>
+    <!-- UI -->
+    <script src="~/Content/js/waypoints.js"></script>
+    <!-- Waypoints -->
+    <script src="~/Content/plugins/mediaelement/mediaelement-and-player.min.js"></script>
+    <!-- MediaElements -->
+    <script src="~/Content/js/init.js"></script>
+    <!-- All Scripts -->
+    <script src="~/Content/plugins/flexslider/js/jquery.flexslider.js"></script>
+    <!-- FlexSlider -->
+    <script src="~/Content/plugins/countdown/js/jquery.countdown.min.js"></script>
+    <!-- Jquery Timer -->
+
+    <script>
+
+       
+        $("#toglLive").click(function () {
+            $("#toglLive").css('background-color', '#81ddda');
+            $("#toglRecLive").css('background-color', '#eceae4');
+            $("#RecLiveCont").css('display', 'none');
+            $("#LiveCont").css('display', 'flex');
+        });
+        $("#toglRecLive").click(function () {
+            $("#toglLive").css('background-color', '#eceae4', 'text-decoration', 'none');
+            $("#toglRecLive").css('background-color', '#81ddda', 'text-decoration', 'underline');
+            $("#LiveCont").css('display', 'none');
+            $("#RecLiveCont").css('display', 'flex');
+        });
+        $("#RecLiveCont_LS1").click(function () {
+            $("#YTifr").attr('src', 'https://www.youtube.com/embed/a-WFtXAwjsg?si=zZTuIEQtSyJxjZM0');
+            $("#EventHeaderTam").text('ஞாயிறு கூடுகை - Bro. Samuel');
+            $("#EventHeaderEng").text('Sunday Meeting - Bro. Samuel');
+            $('#EventHeaderTime').text('Coimbatore CFC 19.11.2023 | Sunday Meeting');
+        });
+        $("#RecLiveCont_LS2").click(function () {
+            $("#YTifr").attr('src', 'https://www.youtube.com/embed/sW7KoB4cIUs?si=ppsrd9M37zL0qUcR');
+            $("#EventHeaderTam").text('இயேசு தம்முடைய தாழ்மையினாலே சாத்தானை ஜெயித்தார், தமது கீழ்ப்படிதலினாலே அவர் தேவனை பிரியப்படுத்தினார் - Bro. Samuel');
+            $("#EventHeaderEng").text('By humility Jesus overcame Satan and by His obedience He pleased God - Bro. Samuel');
+            $('#EventHeaderTime').text('Coimbatore CFC 15.11.2023 | Wednesday Meeting');
+        });
+        $("#RecLiveCont_LS3").click(function () {
+            $("#YTifr").attr('src', 'https://www.youtube.com/embed/pllcH32sOXU?si=JACDszzrrBHZrEu6');
+            $("#EventHeaderTam").text('கீழ்ப்படிதல் என்பது மட்டுமே நமது கிறிஸ்தவ ஜீவியத்திற்கு தேவையான ஒரே ஒரு காரியம் - Bro. Samuel');
+            $("#EventHeaderEng").text('Obedience is the only one thing needed in our spiritual Life - Bro. Samuel');
+            $('#EventHeaderTime').text('Coimbatore CFC 12.11.2023 | Sunday Meeting');
+
+        });
+        $("#RecLiveCont_LS4").click(function () {
+            $("#YTifr").attr('src', 'https://www.youtube.com/embed/8sHnWMQeu2k?si=OHdZSpbq0pHtcIkn');
+            $("#EventHeaderTam").text('தேவன் தாம் வாக்குதத்தம் பண்ணினவைகளை தமது உத்தமமானவர்கள் மூலமாக நிறைவேற்ற வல்லவராக இருக்கிறார் | Bro. Samuel');
+            $("#EventHeaderEng").text('God is able to fulfill what he has promised through his faithful ones | Bro. Samuel');
+            $('#EventHeaderTime').text('Coimbatore CFC 08.11.2023 | Wednesday Meeting');
+        });
+    </script>
+</body>
+</html>

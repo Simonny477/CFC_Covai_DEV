@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Sermons";
+}
+<div class="nav-backed-header parallax" style=" background-image:url(); ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <!-- Breadcrumb NavXT 7.2.0 -->
+                    <li class="home">
+                        <span property="itemListElement" typeof="ListItem">
+                            <h3 style="color:white;" class="post-title">Sermons</h3>
+                        </span>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start Content -->
+<div class="main" role="main">
+    <div id="content" class="content full">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-lg-8 col-sm-12">
+                    <div class="listing post-listing" id="watchVideo">
+                        <header class="listing-header">
+                            <h3>Watch Sermon</h3>
+                        </header>
+                        <section class="listing-cont">
+                            <div class="plyr__video-wrapper plyr__video-embed" style="aspect-ratio: 16 / 9;">
+                                <iframe id="youtube-8972" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="" width="640" height="360" src="https://www.youtube.com/embed/ZWbnXmPxytc??autoplay=1&origin=http://example.com"></iframe>
+                            </div>
+
+                           
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="listing post-listing">
+                        <header class="listing-header">
+                            <h3>Sunday Sermons</h3>
+                        </header>
+                        <section class="listing-cont">
+                            <ul>
+                                @foreach (var sermon in Model)
+                                {
+                                    <li class="item post">
+                                        <div class="row">
+                                            <div class="col-md-4"> <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo" class="media-box"> <img src="~/Images/YT-thumbnails/12.11.23_Wed.jpg" srcset="" alt="" class="img-thumbnail"> </a></div>
+                                            <div class="col-md-8">
+                                                <div class="">
+                                                    <p>@sermon.Title</p>
+                                                    <span class=""><i class="fa fa-calendar"></i> on @sermon.PostedOn &nbsp; <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo" class="btn btn-primary">Watch<i class="fa fa-long-arrow-right"></i></a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+
+
+                <ul class="pagination">
+                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+            </div>-->
+            <!-- Start Sidebar -->
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function playYTVideo(videoId) {
+
+        $("#youtube-8972").attr('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&origin=http://example.com');
+        //$("#EventHeaderTam").text('ஞாயிறு கூடுகை - Bro. Samuel');
+        //$("#EventHeaderEng").text('Sunday Meeting - Bro. Samuel');
+        //$('#EventHeaderTime').text('Coimbatore CFC 19.11.2023 | Sunday Meeting');
+    }
+</script>

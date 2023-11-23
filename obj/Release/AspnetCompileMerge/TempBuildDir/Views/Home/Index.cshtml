@@ -1,0 +1,270 @@
+﻿@{
+    ViewBag.Title = "CFC Coimbatore";
+}
+
+
+<!-- Start Hero Slider -->
+<div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="fade" data-pause="yes" style=" height: 620px">
+    <ul class="slides">
+        <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item; height: 620px"> <img style="width: 100%;" src="~/Images/Banner/John-8_32_1st.png" /> </li>
+        <!--<li style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">  <img style="width: 100%;" src="images/the-glory-of-the-new-covenant.jpg" /> </li>
+        <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">  <img style="width: 100%;" src="images/The-Last-Days-and-The-Lords-Coming.jpg" /> </li>
+        <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">  <img style="width: 100%;" src="images/The-Missing-Messages-In-Todays-Christianity.jpg" /> </li>
+        <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">  <img style="width: 100%;" src="images/The-Way-To-Growth-In-Christlikeness.jpg" /> </li>-->
+    </ul>
+</div>
+<!-- End Hero Slider -->
+<!-- Start Notice Bar -->
+<div class="notice-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-title"> <span class="notice-bar-title-icon hidden-xs"><i class="fa fa-calendar fa-3x"></i></span> <span class="title-note" id="next">Next</span> <strong>Upcoming Event</strong> </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-event-title">
+                <h5><a href="single-event.html"><span id="meetingDay"></span> Gathering</a></h5>
+                <span class="meta-data" id="meetingDate"></span>
+            </div>
+            <div id="counter" class="col-md-4 col-sm-6 col-xs-12 counter" data-date="1701068400">
+                <div class="timer-col"> <span id="days"></span> <span class="timer-type">days</span> </div>
+                <div class="timer-col"> <span id="hours"></span> <span class="timer-type">hrs</span> </div>
+                <div class="timer-col"> <span id="minutes"></span> <span class="timer-type">mins</span> </div>
+                <div class="timer-col"> <span id="seconds"></span> <span class="timer-type">secs</span> </div>
+            </div>
+            <div class="col-md-2 col-sm-6 hidden-xs"> <a href="#watchVideo" id="watch" onclick="playYTVideo('@ViewBag.MeetingId')" class="btn btn-primary btn-lg btn-block">Watch</a> </div>
+        </div>
+    </div>
+</div>
+
+<div class="main" role="main">
+    <div id="content" class="content full">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-sm-6">
+                    <!-- Events Listing -->
+                    <div class="listing events-listing">
+                        <header class="listing-header">
+                            <h3>Watch Events</h3>
+                        </header>
+                        <section class="listing-cont">
+                            <ul>
+                                <li class="item event-item">
+                                    <div class="event-date"> <span class="date">06</span> <span class="month">Aug</span> </div>
+                                    <div class="event-detail">
+                                        <h4><a href="single-event.html">Monday Prayer</a></h4>
+                                        <span class="event-dayntime meta-data">Monday | 07:00 AM</span>
+                                    </div>
+                                    <div class="to-event-url">
+                                        <div><a href="single-event.html" class="btn btn-default btn-sm">Details</a></div>
+                                    </div>
+                                </li>
+                                <li class="item event-item">
+                                    <div class="event-date"> <span class="date">28</span> <span class="month">Aug</span> </div>
+                                    <div class="event-detail">
+                                        <h4><a href="single-event.html">Staff members meet</a></h4>
+                                        <span class="event-dayntime meta-data">Monday | 01:00 PM</span>
+                                    </div>
+                                    <div class="to-event-url">
+                                        <div><a href="single-event.html" class="btn btn-default btn-sm">Details</a></div>
+                                    </div>
+                                </li>
+                                <li class="item event-item">
+                                    <div class="event-date"> <span class="date">25</span> <span class="month">Sep</span> </div>
+                                    <div class="event-detail">
+                                        <h4><a href="single-event.html">Evening Prayer</a></h4>
+                                        <span class="event-dayntime meta-data">Friday | 06:00 PM</span>
+                                    </div>
+                                    <div class="to-event-url">
+                                        <div><a href="single-event.html" class="btn btn-default btn-sm">Details</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="spacer-30"></div>
+              
+                    <!-- Latest News -->
+
+
+                </div>
+                <!-- Start Sidebar -->
+                <div class="col-md-4 col-sm-6">
+                    <!-- Latest Sermons -->
+                    <div class="listing sermons-listing">
+                        <header class="listing-header">
+                            <h3>Meeting Details</h3>
+                        </header>
+                        <section class="listing-cont">
+                            <ul>
+                                <li class="item sermon featured-sermon">
+                                    <h4><a href="single-sermon.html">Sunday Gathering</a></h4>
+                                    <span class="vent-dayntime meta-data">10:00am to 01:00pm at @Html.ActionLink("church location", "Contact", "Home", new { target = "_blank" })</span>
+                                </li>
+                                <li class="item sermon featured-sermon">
+                                    <h4><a href="single-sermon.html">Wednesday Gathering</a></h4>
+                                    <span class="vent-dayntime meta-data">07:00pm to 08:30pm at @Html.ActionLink("church location", "Contact", "Home", new { target = "_blank" })</span>
+                                </li>
+
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main" role="main">
+    <div id="content" class="content full">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="listing post-listing" id="watchVideo">
+                        <header class="listing-header">
+                            <h3>Watch Sermons</h3>
+                        </header>
+                        <section class="listing-cont">
+                            @*<div class="plyr__video-wrapper plyr__video-embed" style="aspect-ratio: 16 / 9;">
+                                <iframe id="youtube-8972" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="" width="640" height="360" src="https://www.youtube.com/embed/8sHnWMQeu2k?autoplay=0&amp;controls=0&amp;disablekb=1&amp;playsinline=1&amp;cc_load_policy=0&amp;cc_lang_pref=auto&amp;widget_referrer=https%3A%2F%2Fnative-church.imithemes.com%2Fparish%2Fimi_sermon%2Fduis-pellentesque-purus-ac-nulla-3%2F&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;customControls=true&amp;noCookie=false&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fnative-church.imithemes.com&amp;widgetid=1"></iframe>
+                            </div>*@
+
+                            <iframe id="youtube-8972" type="text/html" width="640" height="360"
+                                    src="https://www.youtube.com/embed/pINF21_shc0?autoplay=0&origin=http://example.com"
+                                    frameborder="0"></iframe>
+                        </section>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script type="text/javascript">
+
+
+        var countDownDate = new Date("@ViewBag.NextMeetingDate").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("days").innerHTML = days
+            document.getElementById("hours").innerHTML = hours
+            document.getElementById("minutes").innerHTML = minutes
+            document.getElementById("seconds").innerHTML = seconds
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                $('#next').css('background', 'red');
+                document.getElementById("next").innerText = "Live";
+            }
+        }, 1000);
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var d = new Date("@ViewBag.NextMeetingDate");
+        var dayName = days[d.getDay()];
+        document.getElementById("meetingDay").innerHTML = dayName
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+    document.getElementById("meetingDate").innerHTML = "At "+d.getHours() + ":" + d.getMinutes() + ", " + d.getDate() + "-" + monthNames[d.getMonth()].substring(0, 3) + "-" + d.getFullYear()
+
+    function playYTVideo(videoId) {
+
+        $("#youtube-8972").attr('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=0&origin=http://example.com');
+        //$("#EventHeaderTam").text('ஞாயிறு கூடுகை - Bro. Samuel');
+        //$("#EventHeaderEng").text('Sunday Meeting - Bro. Samuel');
+        //$('#EventHeaderTime').text('Coimbatore CFC 19.11.2023 | Sunday Meeting');
+    }
+</script>
+
+@*############################################################################################*@
+@*########################## Need to UnComment if Necessary ##################################*@
+@*############################################################################################*@
+<!-- End Notice Bar -->
+<!-- Start Content -->
+<!--<div class="main" role="main">
+    <div id="content" class="content full">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-7 col-sm-6">-->
+<!-- Latest Sermons -->
+<!--<div class="listing sermons-listing">
+
+    <section style="border-top:none;" class="listing-cont">
+        <ul>
+            <li class="item sermon featured-sermon">-->
+<!--<span class="date">Feb 14, 2014</span>-->
+<!--<h4 id="EventHeaderTam"><a href=""></a></h4>
+<h4 id="EventHeaderEng"><a href=""></a></h4>
+<h5 id="EventHeaderTime"></h5>
+<div class="featured-sermon-video">-->
+<!--<iframe width="200" height="150" src="http://player.vimeo.com/video/19564018?title=0&amp;byline=0&amp;color=007F7B"></iframe>-->
+<!--<iframe id="YTifr" width="200" height="150" src="https://www.youtube.com/embed/a-WFtXAwjsg?si=zZTuIEQtSyJxjZM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                      </li>
+
+            </ul>
+        </section>
+    </div>
+    <div class="spacer-30"></div>
+</div>-->
+<!-- Start Sidebar -->
+<!--<div class="col-md-5 col-sm-6">-->
+<!-- Events Listing -->
+<!--<div class="listing events-listing">
+                        <header style="border-bottom:none;" class="listing-header">
+                            <h3>LIVE SERVICE</h3>
+                        </header>
+
+                        <section style="border-top:none;" class="listing-cont">
+                            <div style="min-height: 355px; background-color: #eceae4; border-radius: 10px; font-family: 'Roboto'; font-size:15px;">
+                                <div style="display:flex; ">
+                                    <span id="toglLive" style="width: 50%; font-weight:600; text-align: center; font-size: medium; cursor: pointer; padding: 15px; border-top-left-radius: 10px; background-color: #81ddda; ">LIVE</span>
+                                    <span id="toglRecLive" style="width: 50%; font-weight: 600; text-align: center; font-size: medium; cursor: pointer; padding: 15px; border-top-right-radius: 10px; ">RECENT LIVE</span>
+                                </div>
+                                <div id="LiveCont" style="padding:30px;">
+                                    <h5 style="cursor:pointer;">Upcoming Live Event</h5>
+                                </div>
+                                <div id="RecLiveCont" style="display: none; line-height: 10px; padding: 30px;">
+                                    <ul>
+                                        <li id="RecLiveCont_LS1" style="line-height: 7px; margin-bottom: 27px; cursor: pointer;">
+                                            <h5 style="margin-bottom: 5px;">Sunday Service | CCFC, Kavundampalayam</h5>
+                                            <span>Sunday, November 19, 2023</span>
+                                        </li>
+                                        <li id="RecLiveCont_LS2" style="line-height: 7px; margin-bottom: 27px; cursor: pointer;">
+                                            <h5 style="margin-bottom: 5px; cursor: pointer;">Wednesday Service | CCFC, Kavundampalayam</h5>
+                                            <span>Wednesday, November 15, 2023</span>
+                                        </li>
+                                        <li id="RecLiveCont_LS3" style="line-height: 7px; margin-bottom: 27px; cursor: pointer;">
+                                            <h5 style="margin-bottom: 5px; cursor: pointer;">Sunday Service | CCFC, Kavundampalayam</h5>
+                                            <span>Sunday, November 12, 2023</span>
+                                        </li>
+                                        <li id="RecLiveCont_LS4" style="line-height: 7px; margin-bottom: 27px; cursor: pointer;">
+                                            <h5 style="margin-bottom: 5px; cursor: pointer;">Wednesday Service | CCFC, Kavundampalayam</h5>
+                                            <span>Wednesday, November 8, 2023</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->

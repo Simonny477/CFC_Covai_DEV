@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BAL\ReadFilesAndProcessRecords.cs" />
     <Compile Include="Controllers\SermonsController.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1740,7 +1741,8 @@
     <Content Include="Content\plugins\rs-plugin\js\jquery.themepunch.revolution.js" />
     <Content Include="Content\plugins\rs-plugin\js\jquery.themepunch.revolution.min.js" />
     <Content Include="Content\plugins\rs-plugin\js\jquery.themepunch.tools.min.js" />
-    <Content Include="Docs\liveinfos.txt" />
+    <Content Include="Docs\contactpersons.txt" />
+    <Content Include="Docs\upcomingmeetings.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ImagesNew\John-14-6-background.jpg" />
@@ -1759,13 +1761,13 @@
     <Content Include="Images\Coimbatore-Name-Logo.png" />
     <Content Include="Images\John-14-6-background.jpg" />
     <Content Include="Images\photo-1438232992991-995b7058bbb3.jpg" />
-    <Content Include="Images\YT-thumbnails\01.11.23_Wed.jpg" />
-    <Content Include="Images\YT-thumbnails\05.11.23_Sun.jpg" />
-    <Content Include="Images\YT-thumbnails\08.11.23_Wed.jpg" />
-    <Content Include="Images\YT-thumbnails\12.11.23_Wed.jpg" />
-    <Content Include="Images\YT-thumbnails\15.11.23_Wed.jpg" />
-    <Content Include="Images\YT-thumbnails\19.11.23_Sunday.jpg" />
-    <Content Include="Images\YT-thumbnails\29.10.23_Sunday.jpg" />
+    <Content Include="Images\YT-thumbnails-Wed\01.11.23_Wed.jpg" />
+    <Content Include="Images\YT-thumbnails-Wed\05.11.23_Sun.jpg" />
+    <Content Include="Images\YT-thumbnails-Wed\08.11.23_Wed.jpg" />
+    <Content Include="Images\YT-thumbnails-Wed\12.11.23_Wed.jpg" />
+    <Content Include="Images\YT-thumbnails-Wed\15.11.23_Wed.jpg" />
+    <Content Include="Images\YT-thumbnails-Wed\19.11.23_Sunday.jpg" />
+    <Content Include="Images\YT-thumbnails-Wed\29.10.23_Sunday.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -1866,6 +1868,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\audio\" />
+    <Folder Include="Images\YT-thumbnails-Sun\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

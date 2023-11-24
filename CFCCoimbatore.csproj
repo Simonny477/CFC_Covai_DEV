@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BAL\ReadFilesAndProcessRecords.cs" />
     <Compile Include="Controllers\SermonsController.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1740,7 +1741,8 @@
     <Content Include="Content\plugins\rs-plugin\js\jquery.themepunch.revolution.js" />
     <Content Include="Content\plugins\rs-plugin\js\jquery.themepunch.revolution.min.js" />
     <Content Include="Content\plugins\rs-plugin\js\jquery.themepunch.tools.min.js" />
-    <Content Include="Docs\liveinfos.txt" />
+    <Content Include="Docs\contactpersons.txt" />
+    <Content Include="Docs\upcomingmeetings.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ImagesNew\John-14-6-background.jpg" />

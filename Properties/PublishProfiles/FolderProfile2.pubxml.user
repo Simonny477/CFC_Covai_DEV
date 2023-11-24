@@ -16,10 +16,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 14:10:07</publishTime>
     </File>
     <File Include="bin/CFCCoimbatore.dll">
-      <publishTime>11/23/2023 23:45:10</publishTime>
+      <publishTime>11/24/2023 13:47:34</publishTime>
     </File>
     <File Include="bin/CFCCoimbatore.pdb">
-      <publishTime>11/23/2023 23:45:10</publishTime>
+      <publishTime>11/24/2023 13:47:34</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>11/23/2023 14:10:13</publishTime>
@@ -5187,8 +5187,14 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/plugins/rs-plugin/js/jquery.themepunch.tools.min.js">
       <publishTime>11/23/2023 14:09:42</publishTime>
     </File>
+    <File Include="Docs/contactpersons.txt">
+      <publishTime>11/24/2023 10:53:03</publishTime>
+    </File>
     <File Include="Docs/liveinfos.txt">
       <publishTime>11/23/2023 14:09:42</publishTime>
+    </File>
+    <File Include="Docs/upcomingmeetings.txt">
+      <publishTime>11/24/2023 13:45:09</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>11/23/2023 14:08:46</publishTime>
@@ -5347,7 +5353,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 14:10:19</publishTime>
     </File>
     <File Include="Views/AboutUs/ShortHsitory.cshtml">
-      <publishTime>11/23/2023 14:10:19</publishTime>
+      <publishTime>11/24/2023 09:22:58</publishTime>
     </File>
     <File Include="Views/AboutUs/WhatWeBelieve.cshtml">
       <publishTime>11/23/2023 14:10:20</publishTime>
@@ -5362,7 +5368,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 16:44:59</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/23/2023 23:42:29</publishTime>
+      <publishTime>11/24/2023 13:30:08</publishTime>
     </File>
     <File Include="Views/Home/MaintenancePage.cshtml">
       <publishTime>11/23/2023 14:10:20</publishTime>

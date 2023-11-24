@@ -16,10 +16,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 14:10:07</publishTime>
     </File>
     <File Include="bin/CFCCoimbatore.dll">
-      <publishTime>11/24/2023 13:47:34</publishTime>
+      <publishTime>11/24/2023 15:11:39</publishTime>
     </File>
     <File Include="bin/CFCCoimbatore.pdb">
-      <publishTime>11/24/2023 13:47:34</publishTime>
+      <publishTime>11/24/2023 15:11:39</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>11/23/2023 14:10:13</publishTime>
@@ -5238,6 +5238,105 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Images/photo-1438232992991-995b7058bbb3.jpg">
       <publishTime>11/23/2023 14:09:42</publishTime>
     </File>
+    <File Include="Images/YT-thumbnails-Sun/01.10.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/01.11.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/02.07.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/03.09.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/05.11.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/06.08.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/08.10.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/08.11.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/09.07.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/10.09.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/12.11.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/13.08.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/15.10.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/15.11.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/16.07.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/17.09.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/19.11.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/20.08.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/22.10.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/23.07.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/24.09.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/25.06.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/27.08.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Sun/29.10.23_Sun.jpg">
+      <publishTime>11/24/2023 14:52:40</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/02.08.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/05.06.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/09.08.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/12.07.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/16.08.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/19.07.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/23.08.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/26.07.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
+    <File Include="Images/YT-thumbnails-Wed/28.06.23_Wed.jpg">
+      <publishTime>11/24/2023 14:55:28</publishTime>
+    </File>
     <File Include="Images/YT-thumbnails/01.11.23_Wed.jpg">
       <publishTime>11/23/2023 14:09:43</publishTime>
     </File>
@@ -5368,7 +5467,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 16:44:59</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/24/2023 13:30:08</publishTime>
+      <publishTime>11/24/2023 14:02:58</publishTime>
     </File>
     <File Include="Views/Home/MaintenancePage.cshtml">
       <publishTime>11/23/2023 14:10:20</publishTime>
@@ -5377,10 +5476,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2023 16:46:40</publishTime>
     </File>
     <File Include="Views/Sermons/SunSermons.cshtml">
-      <publishTime>11/23/2023 19:30:17</publishTime>
+      <publishTime>11/24/2023 15:08:50</publishTime>
     </File>
     <File Include="Views/Sermons/WedSermons.cshtml">
-      <publishTime>11/23/2023 19:29:49</publishTime>
+      <publishTime>11/24/2023 15:08:24</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/23/2023 14:10:20</publishTime>

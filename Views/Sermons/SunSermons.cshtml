@@ -49,7 +49,7 @@
                                 {
                                     <li class="item post">
                                         <div class="row">
-                                            <div class="col-md-4"> <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo" class="media-box"> <img src="~/Images/YT-thumbnails/12.11.23_Wed.jpg" srcset="" alt="" class="img-thumbnail"> </a></div>
+                                            <div class="col-md-4"> <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo" class="media-box"> <img src="@sermon.ThumbNailPath" srcset="" alt="" class="img-thumbnail"> </a></div>
                                             <div class="col-md-8">
                                                 <div class="">
                                                     <p>@sermon.Title</p>
@@ -68,15 +68,15 @@
 
 
                 <ul class="pagination">
-                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=a-WFtXAwjsg&list=PLh7ruzA6zb1TPU4fO6r9sxbATJelIKQvO" target="_blank"><i class="fa fa-chevron-right"></i>Watch More</a></li>
+                    @*<li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>*@
                 </ul>
-            </div>-->
+            </div>
             <!-- Start Sidebar -->
 
         </div>

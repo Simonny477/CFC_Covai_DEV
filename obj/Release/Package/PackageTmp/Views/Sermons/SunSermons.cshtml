@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewBag.Title = "Sermons";
 }
 <div class="nav-backed-header parallax" style=" background-image:url(); ">
@@ -29,13 +29,18 @@
                         <header class="listing-header">
                             <h3>Watch Sermon</h3>
                         </header>
-                        <section class="listing-cont">
+                        <section class="listing-contcol-sm-12">
                             <div class="plyr__video-wrapper plyr__video-embed" style="aspect-ratio: 16 / 9;">
-                                <iframe id="youtube-8972" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="" width="640" height="360" src="https://www.youtube.com/embed/ZWbnXmPxytc??autoplay=1&origin=http://example.com"></iframe>
+                                <iframe id="youtube-8972" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="" width="640" height="360" src="https://www.youtube.com/embed/@ViewBag.DefaultVideo?autoplay=1&origin=http://example.com"></iframe>
                             </div>
 
-                           
+
+
                         </section>
+                        <hr />
+                        <div   style="background-color:lightgray; border-radius:6px">
+                            <h4 id="mvideoDesc" style="padding:10px"><strong>@ViewBag.DefaultVideoTitle</strong> <br /><br /> @ViewBag.DefaultVideoDesc</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-sm-12">
@@ -52,10 +57,9 @@
                                             <div class="col-md-4"> <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo" class="media-box"> <img src="@sermon.ThumbNailPath" srcset="" alt="" class="img-thumbnail"> </a></div>
                                             <div class="col-md-8">
                                                 <div class="">
-                                                    <p>@sermon.Title</p>
-                                                    <span class=""><i class="fa fa-calendar"></i> on @sermon.PostedOn &nbsp; <a onclick="playYTVideo('@sermon.VideoId')" href="#watchVideo" class="btn btn-primary">Watch<i class="fa fa-long-arrow-right"></i></a></span>
+                                                    <p style="font-size:x-small">@sermon.Title <br /><span class=""><i class="fa fa-calendar"></i>&nbsp; on @sermon.PostedOn &nbsp; </span></p>
                                                 </div>
-
+                                                <p id=@("desc"+sermon.VideoId) name="custId" hidden="hidden"> <strong >@sermon.Title</strong> <br /><br /> @sermon.Description  </p>
                                             </div>
                                         </div>
                                     </li>
@@ -68,7 +72,7 @@
 
 
                 <ul class="pagination">
-                    <li><a href="https://www.youtube.com/watch?v=SEJPr_DLdGo&list=PLh7ruzA6zb1QPt7XRavgxJHRaJJGlaOgy&ab_channel=CFCCoimbatore" target="_blank"><i class="fa fa-chevron-right"></i>Watch More</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=a-WFtXAwjsg&list=PLh7ruzA6zb1TPU4fO6r9sxbATJelIKQvO" target="_blank"><i class="fa fa-chevron-right"></i>Watch More</a></li>
                     @*<li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
@@ -88,8 +92,8 @@
     function playYTVideo(videoId) {
 
         $("#youtube-8972").attr('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&origin=http://example.com');
-        //$("#EventHeaderTam").text('ஞாயிறு கூடுகை - Bro. Samuel');
-        //$("#EventHeaderEng").text('Sunday Meeting - Bro. Samuel');
-        //$('#EventHeaderTime').text('Coimbatore CFC 19.11.2023 | Sunday Meeting');
+       
+
+        $("#mvideoDesc").html($("#desc" + videoId).html())
     }
 </script>

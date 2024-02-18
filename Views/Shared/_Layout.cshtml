@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 
 <html class="no-js">
 <head>
     <!-- Basic Page Needs
     ================================================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>CFC- Coimbatore</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -25,6 +26,8 @@
     <link href="/Content/colors/color1.css" rel="stylesheet" type="text/css">
     <link href="/Content/css/custom.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <!-- SCRIPTS
       ================================================== -->
     <script src="/Content/js/modernizr.js"></script><!-- Modernizr -->
@@ -108,6 +111,10 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .photo-shadow {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        }
     </style>
 </head>
 
@@ -122,40 +129,41 @@
                 <div class="topbar" style="background-color: rgba(255,255,255,.6) ">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 col-sm-6 col-xs-8">
-                                <h1 class="logo"> <a href="../home/index"><img src="~/Images/Coimbatore-Name-Logo.png" alt="Logo"></a> </h1>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <a href="../"><img src="~/Images/CFC_Coimbatore.png" alt="Logo" style="height:75px; width:75px"></a>
                             </div>
-                            <div class="col-md-8 col-sm-6 col-xs-4">                              
+                            <div class="col-lg-5 col-md-5 col-sm-5 hidden-xs" style="position: absolute; bottom: 0; left: 30%; ">
+                                <p style="color: #913838; font-weight:bold; font-size:33px">Coimbatore Christian Fellowship Church</p>
+                            </div>
+                            <div class="hidden-md col-md-9 col-sm-9 col-xs-9">
                                 <a href="#" class="visible-sm visible-xs menu-toggle"><i class="fa fa-bars"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="main-menu-wrapper">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <nav class="navigation">
-                                    <ul class="sf-menu" style="background: #F2CA65; ">
+                                    <ul class="sf-menu" style="background: #F2CA65; font-size: 22px; font-weight: bold; ">
                                         <li>
                                             @Html.ActionLink("Home", "Index", "Home")
 
                                         </li>
                                         <li>
-                                            @Html.ActionLink("About Us", "About", "Home")
+                                            @Html.ActionLink("About Us", "ShortHsitory", "AboutUs")
                                             <ul class="dropdown">
-                                                <li>@Html.ActionLink("Short Hsitory", "ShortHsitory", "AboutUs")</li>
+                                                <li>@Html.ActionLink("Short History", "ShortHsitory", "AboutUs")</li>
                                                 <li>@Html.ActionLink("What we Believe", "WhatWeBelieve", "AboutUs")</li>
                                                 <li>@Html.ActionLink("Leadership", "Leadership", "AboutUs")</li>
-                                                <li>@Html.ActionLink("Affliation And Purpose", "OurPurposeandAffliation", "AboutUs")</li>
-                                                <li>@Html.ActionLink("Our Meetings", "OurMeetings", "AboutUs")</li>
-                                                <li>@Html.ActionLink("Our Financial Policy", "OurFinancialPolicy", "AboutUs")</li>
                                             </ul>
                                         </li>
                                         <li>@Html.ActionLink("About Zac Poonen", "AboutZacPoonen", "Home")</li>
-                                        <li>
-                                            @Html.ActionLink("Short Hsitory", "ShortHsitory", "AboutUs")
-                                        </li>
+                                        <!--<li>
+        @Html.ActionLink("Short History", "ShortHsitory", "AboutUs")
+    </li>-->
                                         <li>
                                             @Html.ActionLink("Sermons", "Index", "Home")
                                             <ul class="dropdown">
@@ -164,9 +172,16 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            @Html.ActionLink("Contact Us", "Contact", "Home")
+                                            @Html.ActionLink("Books", "Index", "Home")
+                                            <ul class="dropdown">
+                                                <li>@Html.ActionLink("English Books", "English", "Books")</li>
+                                                <li>@Html.ActionLink("தமிழ் புத்தகங்கள்", "Tamil", "Books")</li>
+                                            </ul>
                                         </li>
-                                        
+                                        <li>
+                                            @Html.ActionLink("Contact Us", "Contact", "ContactUs")
+                                        </li>
+
                                     </ul>
                                 </nav>
                             </div>
@@ -192,24 +207,33 @@
                             <h4 class="footer-widget-title">About our Church</h4>
                             <img src="~/Images/CFC_Coimbatore.png" width="70" height="70" alt="Logo">
                             <div class="spacer-20"></div>
-                            <p>The Christian Fellowship Church in Coimbatore is affiliated with the Christian Fellowship Center in Bangalore and holds its gatherings in Krishna Complex, Kavundampalayam, Coimbatore...</p>
+                            <p>Coimbatore Christian Fellowship Church (CFC Coimbatore) gathers at 2nd Floor Krishna Complex, Kalpana Theater Road, Kavundampalayam, Coimbatore 641030, Tamil Nadu, India...</p>
                             @Html.ActionLink("Read More >>", "ShortHsitory", "AboutUs")
                         </div>
                         <div class="col-md-4 col-sm-4 widget footer-widget">
                             <h4 class="footer-widget-title">Blogroll</h4>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">About Zac Poonen</a></li>
-                                <li><a href="#">Short History</a></li>
-                                <li><a href="#">Sermons</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                                <li>@Html.ActionLink("About Zac Poonen", "AboutZacPoonen", "Home")</li>
+                                <li>@Html.ActionLink("Sunday Sermon", "SunSermons", "Sermons")</li>
+                                <li>@Html.ActionLink("Wednesday Sermon", "WedSermons", "Sermons")</li>
+                                <li>@Html.ActionLink("Contact Us", "Contact", "ContactUs")</li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-4 widget footer-widget">
-                            <h4 class="footer-widget-title">Our Church on Youtube</h4>
-                            <ul class="twitter-widget" data-slide-to="1">
-                            </ul>
+                            <h4 class="footer-widget-title">Sermon YouTube Links</h4>
+                            <a href="https://www.youtube.com/CFCCoimbatore" target="_blank" style="color:teal;font-weight:bold;text-decoration:none;">CFC Coimbatore</a>
+                            <br><br>
+                            <a href="https://www.youtube.com/cfcindiaVideos" target="_blank" style="color:teal;font-weight:bold;text-decoration:none;">CFC India</a>
+                            <!--<ul class="twitter-widget" data-slide-to="1">
+                            </ul>-->
+                        </div>
+                        <div class="col-md-4 col-sm-4 widget footer-widget">
+                            <h4 class="footer-widget-title">Recommended Link</h4>
+                            <a href="https://www.cfcindia.com/" target="_blank" style="color:teal;font-weight:bold;text-decoration:none;">www.cfcindia.com</a>
+                            <!--<ul class="twitter-widget" data-slide-to="1">
+                            </ul>-->
                         </div>
                     </div>
                 </div>
@@ -251,47 +275,24 @@
     <!-- FlexSlider -->
     <script src="~/Content/plugins/countdown/js/jquery.countdown.min.js"></script>
     <!-- Jquery Timer -->
+    @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
 
+    <script src="https://www.biblegateway.com/public/link-to-us/tooltips/bglinks.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        BGLinks.version = "NASB";
+        BGLinks.linkVerses();
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
-
-       
-        $("#toglLive").click(function () {
-            $("#toglLive").css('background-color', '#81ddda');
-            $("#toglRecLive").css('background-color', '#eceae4');
-            $("#RecLiveCont").css('display', 'none');
-            $("#LiveCont").css('display', 'flex');
-        });
-        $("#toglRecLive").click(function () {
-            $("#toglLive").css('background-color', '#eceae4', 'text-decoration', 'none');
-            $("#toglRecLive").css('background-color', '#81ddda', 'text-decoration', 'underline');
-            $("#LiveCont").css('display', 'none');
-            $("#RecLiveCont").css('display', 'flex');
-        });
-        $("#RecLiveCont_LS1").click(function () {
-            $("#YTifr").attr('src', 'https://www.youtube.com/embed/a-WFtXAwjsg?si=zZTuIEQtSyJxjZM0');
-            $("#EventHeaderTam").text('ஞாயிறு கூடுகை - Bro. Samuel');
-            $("#EventHeaderEng").text('Sunday Meeting - Bro. Samuel');
-            $('#EventHeaderTime').text('Coimbatore CFC 19.11.2023 | Sunday Meeting');
-        });
-        $("#RecLiveCont_LS2").click(function () {
-            $("#YTifr").attr('src', 'https://www.youtube.com/embed/sW7KoB4cIUs?si=ppsrd9M37zL0qUcR');
-            $("#EventHeaderTam").text('இயேசு தம்முடைய தாழ்மையினாலே சாத்தானை ஜெயித்தார், தமது கீழ்ப்படிதலினாலே அவர் தேவனை பிரியப்படுத்தினார் - Bro. Samuel');
-            $("#EventHeaderEng").text('By humility Jesus overcame Satan and by His obedience He pleased God - Bro. Samuel');
-            $('#EventHeaderTime').text('Coimbatore CFC 15.11.2023 | Wednesday Meeting');
-        });
-        $("#RecLiveCont_LS3").click(function () {
-            $("#YTifr").attr('src', 'https://www.youtube.com/embed/pllcH32sOXU?si=JACDszzrrBHZrEu6');
-            $("#EventHeaderTam").text('கீழ்ப்படிதல் என்பது மட்டுமே நமது கிறிஸ்தவ ஜீவியத்திற்கு தேவையான ஒரே ஒரு காரியம் - Bro. Samuel');
-            $("#EventHeaderEng").text('Obedience is the only one thing needed in our spiritual Life - Bro. Samuel');
-            $('#EventHeaderTime').text('Coimbatore CFC 12.11.2023 | Sunday Meeting');
-
-        });
-        $("#RecLiveCont_LS4").click(function () {
-            $("#YTifr").attr('src', 'https://www.youtube.com/embed/8sHnWMQeu2k?si=OHdZSpbq0pHtcIkn');
-            $("#EventHeaderTam").text('தேவன் தாம் வாக்குதத்தம் பண்ணினவைகளை தமது உத்தமமானவர்கள் மூலமாக நிறைவேற்ற வல்லவராக இருக்கிறார் | Bro. Samuel');
-            $("#EventHeaderEng").text('God is able to fulfill what he has promised through his faithful ones | Bro. Samuel');
-            $('#EventHeaderTime').text('Coimbatore CFC 08.11.2023 | Wednesday Meeting');
-        });
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            )
+        }
     </script>
 </body>
 </html>

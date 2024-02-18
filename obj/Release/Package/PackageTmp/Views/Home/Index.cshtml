@@ -8,7 +8,7 @@
     <ul class="slides">
         <li class="parallax flex-active-slide" style="background-image: url(../../ImagesNew/John_14_6.png); height: 600px; width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;"></li>
         <li class="parallax flex-active-slide" style="background-image: url(../../ImagesNew/John-8_32_1st.png); height: 600px; width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;"></li>
-        @*<li class="parallax flex-active-slide" style="background-image: url(../../ImagesNew/John-14-6-background.jpg); height: 600px; width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;"></li>*@
+        <li class="parallax flex-active-slide" style="background-image: url(../../ImagesNew/image3.jpg); height: 600px; width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;"></li>
     </ul>
 </div>
 <!-- End Hero Slider -->
@@ -16,10 +16,13 @@
 <div class="notice-bar">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-title"> <span class="notice-bar-title-icon hidden-xs"><i class="fa fa-calendar fa-3x"></i></span> <span class="title-note" id="next">Next</span> <strong>Upcoming Event</strong> </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-title">
+                <span class="notice-bar-title-icon hidden-xs"><i class="fa fa-calendar fa-3x"></i></span>
+                <span class="title-note" id="next">Next</span> <strong id="upcomingevent">Upcoming Event</strong>
+            </div>
             <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-event-title">
-                <h5><a >@ViewBag.MeetingName</a></h5>
-                <span class="meta-data" id="meetingDate">@ViewBag.NextMeetingDate.Substring(0,18)</span>
+                <h5><a>@ViewBag.MeetingName</a></h5>
+                <span class="meta-data" id="meetingDate">@ViewBag.NextMeetingDate.Substring(0, 18)</span>
             </div>
             <div id="counter" class="col-md-4 col-sm-6 col-xs-9 counter" data-date="1701068400">
                 <div class="timer-col"> <span id="days"></span> <span class="timer-type">days</span> </div>
@@ -42,27 +45,28 @@
                     <div class="listing events-listing">
                         <header class="listing-header">
                             <h3>Upcoming Events</h3>
+                            @* <div id="google_translate_element"></div>*@
                         </header>
                         <section class="listing-cont">
                             <ul>
-                                @foreach(var meeting in Model)
-                                { 
-                                <li class="item event-item">
-                                    <div class="event-date"> <span class="date">@meeting.MeetingDateString.Substring(4,2)</span> <span class="month">@meeting.MeetingDateString.Substring(0, 3)</span> </div>
-                                    <div class="event-detail">
-                                        <h4><a>@meeting.MeetingName</a></h4>
-                                        <span class="event-dayntime meta-data">at @meeting.MeetingDateString.Substring(13,5)</span>
-                                    </div>
-                                    <div class="to-event-url">
-                                        
-                                    </div>
-                                </li>
+                                @foreach (var meeting in Model)
+                                {
+                                    <li class="item event-item">
+                                        <div class="event-date"> <span class="date">@meeting.MeetingDateString.Substring(4, 2)</span> <span class="month">@meeting.MeetingDateString.Substring(0, 3)</span> </div>
+                                        <div class="event-detail">
+                                            <h4><a>@meeting.MeetingName</a></h4>
+                                            <span class="event-dayntime meta-data">at @meeting.MeetingDateString.Substring(13, 5)</span>
+                                        </div>
+                                        <div class="to-event-url">
+
+                                        </div>
+                                    </li>
                                 }
                             </ul>
                         </section>
                     </div>
                     <div class="spacer-30"></div>
-              
+
                     <!-- Latest News -->
 
 
@@ -77,12 +81,12 @@
                         <section class="listing-cont">
                             <ul>
                                 <li class="item sermon featured-sermon">
-                                    <h4><a >Sunday Service</a></h4>
-                                    <span class="vent-dayntime meta-data">10:00am to 01:00pm at @Html.ActionLink("church location", "Contact", "Home", new { target = "_blank" })</span>
+                                    <h4><a>Sunday Service</a></h4>
+                                    <span class="vent-dayntime meta-data">10:00am to 01:00pm at @Html.ActionLink("Church location", "Contact", "ContactUs", null, new { target = "_blank" })</span>
                                 </li>
                                 <li class="item sermon featured-sermon">
-                                    <h4><a >Wednesday Gathering</a></h4>
-                                    <span class="vent-dayntime meta-data">07:00pm to 08:30pm at @Html.ActionLink("church location", "Contact", "Home", new { target = "_blank" })</span>
+                                    <h4><a>Wednesday Gathering</a></h4>
+                                    <span class="vent-dayntime meta-data">07:30pm to 09:00pm at @Html.ActionLink("Church location", "Contact", "ContactUs", null, new { target = "_blank" })</span>
                                 </li>
 
                             </ul>
@@ -105,14 +109,14 @@
                         </header>
                         <section class="listing-cont">
                             <div class="plyr__video-wrapper plyr__video-embed" style="aspect-ratio: 16 / 9;">
-                                <iframe id="youtube-8972" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="" width="640" height="360" src="https://www.youtube.com/embed/ZWbnXmPxytc??autoplay=1&origin=http://example.com"></iframe>
+                                <iframe id="youtube-8972" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="" width="640" height="360" src="https://www.youtube.com/embed/@ViewBag.MeetingId?autoplay=1&origin=http://example.com"></iframe>
                             </div>
                         </section>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -146,6 +150,8 @@
                 clearInterval(x);
                 $('#next').css('background', 'red');
                 document.getElementById("next").innerText = "Live";
+                document.getElementById("counter").innerHTML = ''
+                document.getElementById("upcomingevent").innerHTML = "Streaming Now"
             }
         }, 1000);
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -162,7 +168,7 @@
     function playYTVideo(videoId) {
 
         $("#youtube-8972").attr('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&origin=http://example.com');
-        
+
     }
 </script>
 

@@ -17,6 +17,7 @@ namespace CFCCoimbatore.Models
         public string VideoId { get; set; }
         public string Description { get; set; }
         public string PostedOn { get; set; }
+        public DateTime PostedOnDt { get; set; }
         public string speaker { get; set; }
 
     }

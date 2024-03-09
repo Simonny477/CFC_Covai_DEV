@@ -1,0 +1,219 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+@model CFCCoimbatore.Models.Contact
+
+
+<div class="nav-backed-header parallax" style=" background-image:url(); ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <!-- Breadcrumb NavXT 7.2.0 -->
+                    <li class="home">
+                        <span property="itemListElement" typeof="ListItem">
+                            <h3 style="color:white;" class="post-title">Contact Us</h3>
+                        </span>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main" role="main">
+    <div id="content" class="content full">
+        <div class="container">
+            @if (Request.Params["mail"] == "T")
+            {
+            <div class="alert alert-success d-flex align-items-center" role="alert" id="mailsuccess">
+                   <h4 class="alert-heading"> <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink: href="#check-circle-fill" /></svg> Request has been sent!</h4>
+                   <p>We have received your message and would like to thank you for writing to us. <br />If your inquiry is urgent, please use the telephone number listed below to talk to one of our elder brothers.</p>
+                   <p>Otherwise, we will reply by email as soon as possible.</p>
+                   <hr>
+                   
+            </div>
+            }
+
+            <div class="row">
+                <div class="col-md-8">
+                    <header class="single-post-header clearfix">
+                        <h2 class="post-title">Our Location</h2>
+                    </header>
+                    <div class="post-content">
+                        <div id="gmap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125364.15835354418!2d76.9267534568929!3d10.915702460161725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8589734c6487b%3A0x2aa5b0a0a8467710!2sCFC%20Christian%20Fellowship%20Church%20Coimbatore!5e0!3m2!1sen!2sin!4v1700293291128!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="col-md-12" style="color:red" id="errorBlock">
+
+                        </div>
+
+                        <div class="row">
+
+                            @using (Html.BeginForm("sendMail", "ContactUs", FormMethod.Post))
+                            {
+                                <form method="post" id="contactform" name="contactform" class="contact-form" action="mail/contact.php">
+                                    <div class="col-md-6 margin-15">
+
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.Mail.Name, new { @class = "form-control input-lg", placeholder = "Name*", id = "mail_name" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.Mail.FromMail, new { @class = "form-control input-lg", placeholder = "Email*", id = "mail_email" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.Mail.MobileNumber, new { @class = "form-control input-lg", placeholder = "Phone*", id = "mail_mobileNumber" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            @Html.TextAreaFor(model => model.Mail.Body, new { @class = "form-control input-lg", placeholder = "Message*", cols = "6", rows = "7", id = "mail_body", @maxlength = "750" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="Send Mail!" onclick="onSubmit()">
+                                    </div>
+                                </form>
+                            }
+                            <div class="clearfix"></div>
+                            <div class="col-md-12">
+                                <div id="message"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Start Sidebar -->
+                <div class="col-md-4 sidebar">
+                    <!-- Recent Posts Widget -->
+                    <div class="widget-recent-posts widget">
+                        <div class="sidebar-widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+                        <ul>
+
+                            <li class="clearfix">
+                                <span style="font-weight:bolder">Coimbatore Christian Fellowship Church</span>
+                                <p>2nd Floor, Krishna Complex, <br />Koundampalayam-Edayarpalayam Rd,<br />Koundampalayam<br />Coimbatore - 641030</p>
+
+
+                            </li>
+                            <li class="clearfix">
+                                @foreach (var person in Model.ContactUs)
+                                {
+                                    <i class="fa fa-phone" style="font-size:15px"> @person.ContactName : @person.ContactNumber</i>
+                                }
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+    </symbol>
+    <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+    </symbol>
+    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </symbol>
+</svg>
+
+<script type="text/javascript">
+
+    onLoad()
+    function onLoad() {
+
+            setTimeout(function () {
+
+                $('#mailsuccess').fadeOut('slow');
+            }, 7000);
+        
+    }
+
+
+    var errorMsg = ''
+    function onSubmit() {
+
+        errorMsg = ''
+        var mailName = $('#mail_name').val()
+        var mail_email = $('#mail_email').val()
+        var mail_mobileNumber = $('#mail_mobileNumber').val()
+        var mail_body = $('#mail_body').val()
+
+        validateEmpty(mailName, 'Name')
+        validateEmpty(mail_email, 'Email')
+        validateEmpty(mail_mobileNumber, 'Phone')
+        validateEmpty(mail_body, 'Message')
+
+
+        if (errorMsg != '') {
+            $('#errorBlock').html('')
+            $('#errorBlock').html(errorMsg)
+
+            event.preventDefault();
+
+            return false;
+        }
+
+        validateMail(mail_email, 'Email')
+        if (errorMsg != '') {
+            $('#errorBlock').html('')
+            $('#errorBlock').html(errorMsg)
+
+            event.preventDefault();
+
+            return false;
+        }
+
+        validatePhone(mail_mobileNumber, 'Phone')
+        if (errorMsg != '') {
+            $('#errorBlock').html('')
+            $('#errorBlock').html(errorMsg)
+
+            event.preventDefault();
+
+            return false;
+        }
+
+        $(function () {
+            $("#exampleModal").modal('show');
+        });
+
+
+
+    }
+
+    function validateEmpty(val, fieldName) {
+        if (val == '' || val == undefined || val == null) {
+            errorMsg += '<div class="alert alert-danger col-md-12">* ' + fieldName + ' is required </div>'
+        }
+
+    }
+
+    function validateMail(val, fieldName) {
+        if (validateEmail(val) == null) {
+            errorMsg += ' <div class="alert alert-danger col-md-12">* ' + fieldName + ' should be in correct format. below are some examples <br/>&nbsp;&nbsp;abc123@xxxx.xxx <br/>&nbsp;&nbsp;abc123@xxxx.xx </div>'
+        }
+    }
+
+    function validatePhone(val, fieldName) {
+        if (!val.match(/^\d{10}$/)) {
+            errorMsg += '<div class="alert alert-danger col-md-12"> * ' + fieldName + ' should be in 10 digit format. (ex : 9xxxxxxxx0) </div>'
+        }
+    }
+
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+    }
+</script>

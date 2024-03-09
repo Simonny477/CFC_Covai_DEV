@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "BooksTamil";
+}
+
+@model  List<CFCCoimbatore.Models.BookDetails>
+
+<div class="nav-backed-header parallax" style=" background-image:url(); ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <!-- Breadcrumb NavXT 7.2.0 -->
+                    <li class="home">
+                        <span property="itemListElement" typeof="ListItem">
+                            <h3 style="color:white;" class="post-title">புத்தகங்கள்</h3>
+
+                        </span>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main" role="main">
+    <div id="content" class="content full">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="products-list">
+                        @foreach (var books in Model.Where(a => a.Catagory != CFCCoimbatore.Utils.Catagory.Booklet))
+                        {
+                            <li class="col-md-3 col-sm-5">
+
+                                <div class="shop-item" style="box-shadow: 1px 1px 1px 2px #888888; width:222px">
+                                    <span class="product-price" style="text-align:left; width:100%; font-size:inherit;height:40px">@books.Title</span>
+                                    <div class="product-image" style="height:300px; width:215px">
+                                        <img src="@string.Concat(books.ImageUrl, books.ImageName)" alt="" style="height:92%; width:100%">
+                                        <a href="@books.DetailsPageUrl" target="_blank" class="add-to-cart"
+                                           style="height: 100%; width: 100%; margin-left: 0px; left: 0px; font-size: 13px; top: 20px; bottom: 0px; background-color: cadetblue;">
+                                            <span>@books.Description</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
